@@ -11,13 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ServletThree
  */
-@WebServlet("/ServletThree")
+@WebServlet("/ServletNonProf")
 public class ServletNonProf extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Default constructor.
-	 */
+	NonProfObj nonProfToAddtoDB = new NonProfObj();
+
 	public ServletNonProf() {
 		// TODO Auto-generated constructor stub
 	}

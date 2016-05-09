@@ -122,7 +122,7 @@ public class ServletNonProfConn {
 
 	}
 
-	private static String insertToTable = "INSERT INTO `database_name`.`table_name`"
-			+ "(`thing_1`, thing_2`, `thing_3`, `thing_4`, thing_5`, `thing_6`, `thing_7`, thing_8`, `thing_9`)"
-			+ "VALUES" + "(?,?,?,?,?,?,?,?,?)";
+	private static String insertToTable = "INSERT INTO `handleitdb`.`nonprofittable` "
+			+ "(`id`, `name`, `link`, `contact_person`, `email_address`, `focus`, `location`, `projects_type`, `project_description`)"
+			+ " VALUES " + "(?,?,?,?,?,?,?,?,?)";
 }
