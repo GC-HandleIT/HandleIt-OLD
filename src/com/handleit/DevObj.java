@@ -13,7 +13,7 @@ public class DevObj {
 	private String skills;
 
 	public DevObj(String id, String firstName, String lastName, String emailAddress, String location, String picUrl,
-			String profileUrl, String skills, String aboutMe) {
+			String profileUrl, String projects, String skills) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -22,7 +22,7 @@ public class DevObj {
 		this.location = location;
 		this.picUrl = picUrl;
 		this.profileUrl = profileUrl;
-		this.projects = aboutMe;
+		this.projects = projects;
 		this.skills = skills;
 
 	}
@@ -87,12 +87,12 @@ public class DevObj {
 		this.profileUrl = profileUrl;
 	}
 
-	public String getAboutMe() {
+	public String getProjects() {
 		return projects;
 	}
 
-	public void setAboutMe(String aboutMe) {
-		this.projects = aboutMe;
+	public void setProjects(String projects) {
+		this.projects = projects;
 	}
 
 	public String getSkills() {

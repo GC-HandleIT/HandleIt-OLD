@@ -57,7 +57,7 @@ public class ServletDevConn {
 			prepStmt.setString(5, newDevObj.getLocation());
 			prepStmt.setString(6, newDevObj.getPicUrl());
 			prepStmt.setString(7, newDevObj.getProfileUrl());
-			prepStmt.setString(8, newDevObj.getAboutMe());
+			prepStmt.setString(8, newDevObj.getProjects());
 			prepStmt.setString(9, newDevObj.getSkills());
 			
 
@@ -93,7 +93,7 @@ public class ServletDevConn {
 				devForLogin.setLocation(resSet.getString("`location`"));
 				devForLogin.setPicUrl(resSet.getString("`picture_url`"));
 				devForLogin.setProfileUrl(resSet.getString("`public_profile_url`"));
-				devForLogin.setAboutMe(resSet.getString("`projects`"));
+				devForLogin.setProjects(resSet.getString("`projects`"));
 				devForLogin.setSkills(resSet.getString("`skills`"));
 				
 
@@ -115,8 +115,8 @@ public class ServletDevConn {
 
 			initConnToDatabase();
 			stmt = conn.createStatement();
-			resSet = stmt.executeQuery("SELECT * FROM handleitdb.devtable WHERE `" + searchThisColumn + "` LIKE "
-					+ searchThisValue + ";");
+			resSet = stmt.executeQuery("SELECT * FROM handleitdb.devtable WHERE `" + searchThisColumn + "` LIKE '"
+					+ searchThisValue + "';");
 
 			while (resSet.next()) {
 
@@ -129,8 +129,8 @@ public class ServletDevConn {
 				devForNP.setLocation(resSet.getString("`location`"));
 				devForNP.setPicUrl(resSet.getString("`pic_url`"));
 				devForNP.setProfileUrl(resSet.getString("`profile_url`"));
+				devForNP.setProjects(resSet.getString("`projects`"));
 				devForNP.setSkills(resSet.getString("`skills`"));
-				devForNP.setAboutMe(resSet.getString("`about_me`"));
 
 				return devForNP;
 			}
