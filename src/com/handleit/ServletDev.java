@@ -20,7 +20,7 @@ public class ServletDev extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,6 +33,7 @@ public class ServletDev extends HttpServlet {
 		devToAddtoDB.setLocation(request.getParameter("form-location"));
 		devToAddtoDB.setPicUrl(request.getParameter("form-picture_url"));
 		devToAddtoDB.setProfileUrl(request.getParameter("form-profile_url"));
+		devToAddtoDB.setProjects(request.getParameter("form-projects"));
 		devToAddtoDB.setSkills(request.getParameter("form-skills"));
 		
 		System.out.println("Collected a dev table entry");
@@ -41,6 +42,7 @@ public class ServletDev extends HttpServlet {
 		
 		if(ServletDevConn.passOrFail) {
 			response.sendRedirect("writedevtable.html");
+			System.out.println("Dev has been added to the db");
 		}
 	}
 }

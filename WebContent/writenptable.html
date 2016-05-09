@@ -9,7 +9,7 @@
 <meta name="Dev DB Entryform" content="">
 <meta name="ErinBergman" content="">
 
-<title>Dev Table Entry Form</title>
+<title>Non-Prof Table Entry Form</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -58,8 +58,8 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="index.html">Home</a></li> -->
-					<li><a href="nonprofit.html">Non-Profits</a></li>
-					<li><a href="developer.html">Developers</a></li>
+					<li><a href="nonprofit.html">Non-Profit Table Read</a></li>
+					<li><a href="writedevtable.html">Dev Table Write</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
@@ -76,7 +76,7 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 					<div class="page-heading">
-						<h1 style="text-shadow: 2px 2px 4px #000000">Dev Table Entry Form</h1>
+						<h1 style="text-shadow: 2px 2px 4px #000000">Non-Profit Table Entry Form</h1>
 						<hr class="small">
 						<span style="text-shadow: 2px 2px 4px #000000" class="subheading"></span>
 					</div>
@@ -91,7 +91,7 @@
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 				<p>Please fill out each field, if left blank a null value will
 					be added to the database</p>
-				<form action="TheWorldOfLifeServlet" method="post">
+				<form action="ServletDev" method="post">
 					<div class="row control-group">
 						<div
 							class="form-group col-xs-12 floating-label-form-group controls">
@@ -151,20 +151,27 @@
 							class="form-group col-xs-12 floating-label-form-group controls">
 							<label>Picture Url</label> <input type="text"
 								class="form-control" placeholder="Picture Url"
-								name="form-picture_url" id="picture_url" required
-								data-validation-required-message="Please enter the picture url.">
-							<p class="help-block text-danger"></p>
+								name="form-picture_url" id="picture_url">
 						</div>
 					</div>
 					<div class="row control-group">
 						<!-- 7 -->
 						<div
 							class="form-group col-xs-12 floating-label-form-group controls">
-							<label>Profile Url</label> <input type="text"
-								class="form-control" placeholder="Profile Url"
+							<label>LinkedIn Profile Url</label> <input type="text"
+								class="form-control" placeholder="LinkedIn Profile Url"
 								name="form-profile_url" id="profile_url" required
 								data-validation-required-message="Please enter the profile url.">
-							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<!-- 7 -->
+						<div
+							class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Projects</label> <input type="text"
+								class="form-control" placeholder="Projects"
+								name="form-projects" id="projects" required
+								data-validation-required-message="Please enter any project types.">
 						</div>
 					</div>
 					<div class="row control-group">

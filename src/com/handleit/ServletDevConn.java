@@ -78,8 +78,7 @@ public class ServletDevConn {
 			stmt = conn.createStatement();
 			resSet = stmt.executeQuery("SELECT * FROM `handleitdb`.`devtable`; ");
 
-			while (resSet.next())
-				;
+			while (resSet.next()) {
 			String devSearchParam = resSet.getString("`email`");
 
 			if (devSearchParam.equalsIgnoreCase(devLoginEmail)) {
@@ -98,7 +97,7 @@ public class ServletDevConn {
 				
 
 				return devForLogin;
-			}
+			} }
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -106,7 +105,7 @@ public class ServletDevConn {
 		}
 		return null;
 	}
-
+	
 	public static DevObj searchForADev(String aColumn, String aValue) {
 		String searchThisColumn = null;
 		String searchThisValue = null;
@@ -144,7 +143,7 @@ public class ServletDevConn {
 
 	}
 
-	private static String insertToTable = "INSERT INTO `handleitdb`.`devtable`"
-			+ "(`id`, `first_name`, `last_name`, `email_address`, `location`, `picture_url`, `public_profile_url`, projects`, `skills`)"
+	private static String insertToTable = "INSERT INTO `handleitdb`.`devtable` "
+			+ "(`id`, `first_name`, `last_name`, `email_address`, `location`, `picture_url`, `public_profile_url`, `projects`, `skills`)"
 			+ " VALUES " + "(?,?,?,?,?,?,?,?,?)";
 }
