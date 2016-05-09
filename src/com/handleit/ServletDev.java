@@ -35,9 +35,12 @@ public class ServletDev extends HttpServlet {
 		devToAddtoDB.setProfileUrl(request.getParameter("form-profile_url"));
 		devToAddtoDB.setSkills(request.getParameter("form-skills"));
 		
+		System.out.println("Collected a dev table entry");
 		
+		ServletDevConn.writeToDevTable(devToAddtoDB);
 		
-		doGet(request, response);
+		if(ServletDevConn.passOrFail) {
+			response.sendRedirect("writedevtable.html");
+		}
 	}
-
 }

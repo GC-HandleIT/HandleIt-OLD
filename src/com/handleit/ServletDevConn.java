@@ -16,7 +16,7 @@ public class ServletDevConn {
 	static boolean passOrFail = false;
 
 	static final String JBDC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:3306/?user=root?autoReconnect=true&useSSL=false";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/?user=root?autoReconnect=true&useSSL=false"; 
 	static final String USER = "root";
 	static final String PASSWORD = "sesame";
 
@@ -75,7 +75,7 @@ public class ServletDevConn {
 
 			initConnToDatabase();
 			stmt = conn.createStatement();
-			resSet = stmt.executeQuery("SELECT * FROM `db`.`dev table`; ");
+			resSet = stmt.executeQuery("SELECT * FROM `handleitdb`.`devtable`; ");
 
 			while (resSet.next())
 				;
@@ -142,7 +142,7 @@ public class ServletDevConn {
 
 	}
 
-	private static String insertToTable = "INSERT INTO `database_name`.`table_name`"
-			+ "(`thing_1`, thing_2`, `thing_3`, `thing_4`, thing_5`, `thing_6`, `thing_7`, thing_8`, `thing_9`)"
-			+ "VALUES" + "(?,?,?,?,?,?,?,?,?)";
+	private static String insertToTable = "INSERT INTO `handleitdb`.`devtable`"
+			+ "(`id`, `first_name`, `last_name`, `email_address`, location`, `picture_url`, `public_profile_url`, projects`, `skills`)"
+			+ " VALUES " + "(?,?,?,?,?,?,?,?,?)";
 }
