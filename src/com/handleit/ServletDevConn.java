@@ -20,10 +20,10 @@ public class ServletDevConn {
 	static final String USER = "root";
 	static final String PASSWORD = "sesame";
 
-	private static Connection conn = null;
-	private static Statement stmt = null;
-	private static PreparedStatement prepStmt = null;
-	private static ResultSet resSet = null;
+	public static Connection conn = null;
+	public static Statement stmt = null;
+	public static PreparedStatement prepStmt = null;
+	public static ResultSet resSet = null;
 
 	public static void initConnToDatabase() {
 
