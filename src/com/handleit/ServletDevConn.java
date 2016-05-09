@@ -58,7 +58,7 @@ public class ServletDevConn {
 			prepStmt.setString(6, newDevObj.getPicUrl());
 			prepStmt.setString(7, newDevObj.getProfileUrl());
 			prepStmt.setString(8, newDevObj.getSkills());
-			prepStmt.setString(8, newDevObj.getAboutMe());
+			prepStmt.setString(9, newDevObj.getAboutMe());
 
 			prepStmt.executeUpdate();
 			passOrFail = true;
