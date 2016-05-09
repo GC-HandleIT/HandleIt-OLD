@@ -5,25 +5,25 @@ public class NonProfObj {
 	private String id;
 	private String name;
 	private String link;
-	private String contact_person;
-	private String email_address;
+	private String contactPerson;
+	private String emailAddress;
 	private String focus;
 	private String location;
-	private String project_type;
-	private String project_description;
+	private String projectType;
+	private String projectDescription;
 
-	public NonProfObj(String id, String name, String link, String contact_person, String email_address, String focus,
-			String location, String project_type, String project_description) {
+	public NonProfObj(String id, String name, String link, String contactPerson, String emailAddress, String focus,
+			String location, String projectType, String projectDescription) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.link = link;
-		this.contact_person = contact_person;
-		this.email_address = email_address;
+		this.contactPerson = contactPerson;
+		this.emailAddress = emailAddress;
 		this.focus = focus;
 		this.location = location;
-		this.project_type = project_type;
-		this.project_description = project_description;
+		this.projectType = projectType;
+		this.projectDescription = projectDescription;
 	}
 
 	public NonProfObj() {
@@ -54,20 +54,20 @@ public class NonProfObj {
 		this.link = link;
 	}
 
-	public String getContact_person() {
-		return contact_person;
+	public String getContactPerson() {
+		return contactPerson;
 	}
 
-	public void setContact_person(String contact_person) {
-		this.contact_person = contact_person;
+	public void setContactPerson(String contactPerson) {
+		this.contactPerson = contactPerson;
 	}
 
-	public String getEmail_address() {
-		return email_address;
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public void setEmail_address(String email_address) {
-		this.email_address = email_address;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 	public String getFocus() {
@@ -86,20 +86,20 @@ public class NonProfObj {
 		this.location = location;
 	}
 
-	public String getProject_type() {
-		return project_type;
+	public String getProjectType() {
+		return projectType;
 	}
 
-	public void setProject_type(String project_type) {
-		this.project_type = project_type;
+	public void setProjectType(String projectType) {
+		this.projectType = projectType;
 	}
 
-	public String getProject_description() {
-		return project_description;
+	public String getProjectDescription() {
+		return projectDescription;
 	}
 
-	public void setProject_description(String project_description) {
-		this.project_description = project_description;
+	public void setProjectDescription(String projectDescription) {
+		this.projectDescription = projectDescription;
 	}
 
 }

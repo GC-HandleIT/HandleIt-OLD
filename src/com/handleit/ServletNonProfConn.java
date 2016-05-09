@@ -33,12 +33,12 @@ public class ServletNonProfConn {
 			prepStmt.setString(1, newNonProfObj.getId());
 			prepStmt.setString(2, newNonProfObj.getName());
 			prepStmt.setString(3, newNonProfObj.getLink());
-			prepStmt.setString(4, newNonProfObj.getContact_person());
-			prepStmt.setString(5, newNonProfObj.getEmail_address());
+			prepStmt.setString(4, newNonProfObj.getContactPerson());
+			prepStmt.setString(5, newNonProfObj.getEmailAddress());
 			prepStmt.setString(6, newNonProfObj.getFocus());
 			prepStmt.setString(7, newNonProfObj.getLocation());
-			prepStmt.setString(8, newNonProfObj.getProject_type());
-			prepStmt.setString(9, newNonProfObj.getProject_description());
+			prepStmt.setString(8, newNonProfObj.getProjectType());
+			prepStmt.setString(9, newNonProfObj.getProjectDescription());
 
 			prepStmt.executeUpdate();
 			passOrFail = true;
@@ -59,7 +59,7 @@ public class ServletNonProfConn {
 
 			while (resSet.next())
 				;
-			String nonProfSearchParam = resSet.getString("`email`");
+			String nonProfSearchParam = resSet.getString("`email_address`");
 
 			if (nonProfSearchParam.equalsIgnoreCase(NonProfLoginEmail)) {
 
@@ -68,12 +68,12 @@ public class ServletNonProfConn {
 				nonProfForLogin.setId(resSet.getString("`id`"));
 				nonProfForLogin.setName(resSet.getString("`name`"));
 				nonProfForLogin.setLink(resSet.getString("`link`"));
-				nonProfForLogin.setContact_person(resSet.getString("`contact_person`"));
-				nonProfForLogin.setEmail_address(resSet.getString("`location`"));
-				nonProfForLogin.setFocus(resSet.getString("`pic_url`"));
-				nonProfForLogin.setLocation(resSet.getString("`profile_url`"));
-				nonProfForLogin.setProject_type(resSet.getString("`skills`"));
-				nonProfForLogin.setProject_description(resSet.getString("`about_me`"));
+				nonProfForLogin.setContactPerson(resSet.getString("`contact_person`"));
+				nonProfForLogin.setEmailAddress(resSet.getString("`email_address`"));
+				nonProfForLogin.setFocus(resSet.getString("`focus`"));
+				nonProfForLogin.setLocation(resSet.getString("`location`"));
+				nonProfForLogin.setProjectType(resSet.getString("`project_type`"));
+				nonProfForLogin.setProjectDescription(resSet.getString("`project_description`"));
 
 				return nonProfForLogin;
 			}
@@ -101,14 +101,14 @@ public class ServletNonProfConn {
 				NonProfObj npForDev = new NonProfObj();
 
 				npForDev.setId(resSet.getString("`id`"));
-				npForDev.setName(resSet.getString("`first_name`"));
-				npForDev.setLink(resSet.getString("`last_name`"));
-				npForDev.setContact_person(resSet.getString("`email_address`"));
-				npForDev.setEmail_address(resSet.getString("`location`"));
-				npForDev.setFocus(resSet.getString("`pic_url`"));
-				npForDev.setLocation(resSet.getString("`profile_url`"));
-				npForDev.setProject_type(resSet.getString("`skills`"));
-				npForDev.setProject_description(resSet.getString("`about_me`"));
+				npForDev.setName(resSet.getString("`name`"));
+				npForDev.setLink(resSet.getString("`link`"));
+				npForDev.setContactPerson(resSet.getString("`contact_person`"));
+				npForDev.setEmailAddress(resSet.getString("`email_address`"));
+				npForDev.setFocus(resSet.getString("`focus`"));
+				npForDev.setLocation(resSet.getString("`location`"));
+				npForDev.setProjectType(resSet.getString("`project_type`"));
+				npForDev.setProjectDescription(resSet.getString("`project_description`"));
 
 				return npForDev;
 			}
