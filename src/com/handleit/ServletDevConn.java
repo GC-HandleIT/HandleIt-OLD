@@ -113,7 +113,7 @@ public class ServletDevConn {
 
 			initConnToDatabase();
 			stmt = conn.createStatement();
-			resSet = stmt.executeQuery("(SELECT * FROM `db`.`dev table` WHERE `" + searchThisColumn + "` LIKE '%{$"
+			resSet = stmt.executeQuery("(SELECT * FROM `db`.`devtable` WHERE `" + searchThisColumn + "` LIKE '%{$"
 					+ searchThisValue + "}%'");
 
 			while (resSet.next()) {
